@@ -1,4 +1,4 @@
-# deep-ar
+# farmec
 
 ## Project setup
 ```
