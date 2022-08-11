@@ -43,20 +43,20 @@ export default {
           info: "Ruj lichid cu rezistență îndelungată 8H este disponibil în 5 nuanțe.  Un ruj cu o textură remarcabilă care combină o culoare extrem de intensă cu o senzație ultra-soft,\ndar cu un efect optic imediat de volum. Atenţie! Setările monitorului (contrast, luminozitate, intensitate) pot influenţa nuanţa culorilor.",
           imageSrc: "https://www.farmec.ro/media/catalog/product/cache/7fac84570d1a69c5b087ea5bb1fc1c3f/g/e/gerovital-beauty-2519-ruj-cremos-acid-hialuronic-a.png",
           models: [
-            { 1: "/models/RC_01" },
-            { 2: "/models/RC_02" },
-            { 3: "/models/RC_03" },
-            { 4: "/models/RC_04" },
-            { 5: "/models/RC_05" },
-            { 6: "/models/RC_06" }
+            "/models/RC_01",
+            "/models/RC_02",
+            "/models/RC_03",
+            "/models/RC_04",
+            "/models/RC_05",
+            "/models/RC_06"
           ],
           textureImageSrc: [
-            { 1: "/textures/RC_01.jpg" },
-            { 2: "/textures/RC_02.jpg" },
-            { 3: "/textures/RC_03.jpg" },
-            { 4: "/textures/RC_04.jpg" },
-            { 5: "/textures/RC_05.jpg" },
-            { 6: "/textures/RC_06.jpg" },
+            "/textures/RC_01.jpg",
+            "/textures/RC_02.jpg",
+            "/textures/RC_03.jpg",
+            "/textures/RC_04.jpg",
+            "/textures/RC_05.jpg",
+            "/textures/RC_06.jpg",
           ]
         },
 
@@ -67,20 +67,20 @@ export default {
           info: "Ruj lichid cu rezistență îndelungată 8H este disponibil în 5 nuanțe.  Un ruj cu o textură remarcabilă care combină o culoare extrem de intensă cu o senzație ultra-soft,\ndar cu un efect optic imediat de volum. Atenţie! Setările monitorului (contrast, luminozitate, intensitate) pot influenţa nuanţa culorilor.",
           imageSrc: "https://www.farmec.ro/media/catalog/product/cache/7fac84570d1a69c5b087ea5bb1fc1c3f/2/5/2506_2507_2508-ruj-cremos-gerovital-beauty_2.png",
           models: [
-            { 1: "/models/RM_01" },
-            { 2: "/models/RM_02" },
-            { 3: "/models/RM_03" },
-            { 4: "/models/RM_04" },
-            { 5: "/models/RM_05" },
-            { 6: "/models/RM_06" }
+            "/models/RM_01",
+            "/models/RM_02",
+            "/models/RM_03",
+            "/models/RM_04",
+            "/models/RM_05",
+            "/models/RM_06"
           ],
           textureImageSrc: [
-            { 1: "/textures/RM_01.jpg" },
-            { 2: "/textures/RM_02.jpg" },
-            { 3: "/textures/RM_03.jpg" },
-            { 4: "/textures/RM_04.jpg" },
-            { 5: "/textures/RM_05.jpg" },
-            { 6: "/textures/RM_06.jpg" },
+            "/textures/RM_01.jpg",
+            "/textures/RM_02.jpg",
+            "/textures/RM_03.jpg",
+            "/textures/RM_04.jpg",
+            "/textures/RM_05.jpg",
+            "/textures/RM_06.jpg",
           ]
         },
 
@@ -91,20 +91,20 @@ export default {
           info: "Ruj lichid cu rezistență îndelungată 8H este disponibil în 5 nuanțe.  Un ruj cu o textură remarcabilă care combină o culoare extrem de intensă cu o senzație ultra-soft,\ndar cu un efect optic imediat de volum. Atenţie! Setările monitorului (contrast, luminozitate, intensitate) pot influenţa nuanţa culorilor.",
           imageSrc: "https://www.farmec.ro/media/catalog/product/cache/7fac84570d1a69c5b087ea5bb1fc1c3f/2/5/2537-ruj-cremos-gerovital-beauty_1.png",
           models: [
-            { 1: "/models/RL_01" },
-            { 2: "/models/RL_02" },
-            { 3: "/models/RL_03" },
-            { 4: "/models/RL_04" },
-            { 5: "/models/RL_05" },
-            { 6: "/models/RL_06" }
+            "/models/RL_01",
+            "/models/RL_02",
+            "/models/RL_03",
+            "/models/RL_04",
+            "/models/RL_05",
+            "/models/RL_06"
           ],
           textureImageSrc: [
-            { 1: "/textures/RL_01.jpg" },
-            { 2: "/textures/RL_02.jpg" },
-            { 3: "/textures/RL_03.jpg" },
-            { 4: "/textures/RL_04.jpg" },
-            { 5: "/textures/RL_05.jpg" },
-            { 6: "/textures/RL_06.jpg" },
+            "/textures/RL_01.jpg",
+            "/textures/RL_02.jpg",
+            "/textures/RL_03.jpg",
+            "/textures/RL_04.jpg",
+            "/textures/RL_05.jpg",
+            "/textures/RL_06.jpg",
           ]
         }
       ]

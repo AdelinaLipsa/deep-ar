@@ -13,7 +13,7 @@
                         aria-controls="tabs-1-panel-1" role="tab" type="button">
                   <span class="sr-only"> Angled view </span>
                   <span class="absolute inset-0 rounded-md overflow-hidden">
-                <img :src="product.image" alt="" class="w-full h-full object-center object-cover">
+                <img :src="product.imageSrc" alt="" class="w-full h-full object-center object-cover">
               </span>
                   <span class="ring-transparent absolute inset-0 rounded-md ring-2 ring-offset-2 pointer-events-none"
                         aria-hidden="true"></span>
@@ -25,16 +25,13 @@
               <!-- Tab panel, show/hide based on tab state. -->
               <div id="tabs-1-panel-1" aria-labelledby="tabs-1-tab-1" role="tabpanel" tabindex="0">
                 <img
-                    src="https://www.farmec.ro/media/catalog/product/cache/7fac84570d1a69c5b087ea5bb1fc1c3f/2/5/2506_2507_2508-ruj-cremos-gerovital-beauty_2.png"
+                    :src="product.imageSrc"
                     alt="Angled front view with bag zipped and handles upright."
                     class="w-full h-full object-center object-cover sm:rounded-lg">
               </div>
-
-              <!-- More images... -->
             </div>
           </div>
 
-          <!-- Product info -->
           <div class="mt-10 px-4 sm:px-0 sm:mt-16 lg:mt-0">
             <h1 class="text-3xl font-extrabold tracking-tight text-gray-900" v-text="product.name"></h1>
 
@@ -43,7 +40,6 @@
               <p class="text-3xl text-gray-900" v-text="product.price"></p>
             </div>
 
-            <!-- Reviews -->
             <div class="mt-3">
               <h3 class="sr-only">Reviews</h3>
               <div class="flex items-center">
@@ -84,16 +80,14 @@
                 <p v-text="product.info"></p>
               </div>
 
-              <button
-                  class="block text-sm font-medium text-gray-500 pointer-events-none bg-indigo-300 p-2 rounded text-white mt-5 cursor-pointer"
-                  @click="showModal = true">Incearca o textura!
+              <button class="block text-sm font-medium text-gray-500 bg-indigo-300 p-2 rounded text-white mt-5 cursor-pointer"
+                      @click="showModal = true">Incearca o textura!
               </button>
             </div>
           </div>
         </div>
       </div>
     </div>
-
     <deep-pop-up v-if="showModal" :textures="product.textureImageSrc" :models="product.models"></deep-pop-up>
   </div>
 </template>
@@ -141,20 +135,20 @@ export default {
           info: "Ruj lichid cu rezistență îndelungată 8H este disponibil în 5 nuanțe.  Un ruj cu o textură remarcabilă care combină o culoare extrem de intensă cu o senzație ultra-soft,\ndar cu un efect optic imediat de volum. Atenţie! Setările monitorului (contrast, luminozitate, intensitate) pot influenţa nuanţa culorilor.",
           imageSrc: "https://www.farmec.ro/media/catalog/product/cache/7fac84570d1a69c5b087ea5bb1fc1c3f/g/e/gerovital-beauty-2519-ruj-cremos-acid-hialuronic-a.png",
           models: [
-            { 1: "/models/RC_01" },
-            { 2: "/models/RC_02" },
-            { 3: "/models/RC_03" },
-            { 4: "/models/RC_04" },
-            { 5: "/models/RC_05" },
-            { 6: "/models/RC_06" }
+            "/models/RC_01",
+            "/models/RC_02",
+            "/models/RC_03",
+            "/models/RC_04",
+            "/models/RC_05",
+            "/models/RC_06"
           ],
           textureImageSrc: [
-            { 1: "/textures/RC_01.jpg" },
-            { 2: "/textures/RC_02.jpg" },
-            { 3: "/textures/RC_03.jpg" },
-            { 4: "/textures/RC_04.jpg" },
-            { 5: "/textures/RC_05.jpg" },
-            { 6: "/textures/RC_06.jpg" },
+            "/textures/RC_01.jpg",
+            "/textures/RC_02.jpg",
+            "/textures/RC_03.jpg",
+            "/textures/RC_04.jpg",
+            "/textures/RC_05.jpg",
+            "/textures/RC_06.jpg",
           ]
         },
 
@@ -165,20 +159,20 @@ export default {
           info: "Ruj lichid cu rezistență îndelungată 8H este disponibil în 5 nuanțe.  Un ruj cu o textură remarcabilă care combină o culoare extrem de intensă cu o senzație ultra-soft,\ndar cu un efect optic imediat de volum. Atenţie! Setările monitorului (contrast, luminozitate, intensitate) pot influenţa nuanţa culorilor.",
           imageSrc: "https://www.farmec.ro/media/catalog/product/cache/7fac84570d1a69c5b087ea5bb1fc1c3f/2/5/2506_2507_2508-ruj-cremos-gerovital-beauty_2.png",
           models: [
-            { 1: "/models/RM_01" },
-            { 2: "/models/RM_02" },
-            { 3: "/models/RM_03" },
-            { 4: "/models/RM_04" },
-            { 5: "/models/RM_05" },
-            { 6: "/models/RM_06" }
+            "/models/RM_01",
+            "/models/RM_02",
+            "/models/RM_03",
+            "/models/RM_04",
+            "/models/RM_05",
+            "/models/RM_06"
           ],
           textureImageSrc: [
-            { 1: "/textures/RM_01.jpg" },
-            { 2: "/textures/RM_02.jpg" },
-            { 3: "/textures/RM_03.jpg" },
-            { 4: "/textures/RM_04.jpg" },
-            { 5: "/textures/RM_05.jpg" },
-            { 6: "/textures/RM_06.jpg" },
+            "/textures/RM_01.jpg",
+            "/textures/RM_02.jpg",
+            "/textures/RM_03.jpg",
+            "/textures/RM_04.jpg",
+            "/textures/RM_05.jpg",
+            "/textures/RM_06.jpg",
           ]
         },
 
@@ -189,20 +183,18 @@ export default {
           info: "Ruj lichid cu rezistență îndelungată 8H este disponibil în 5 nuanțe.  Un ruj cu o textură remarcabilă care combină o culoare extrem de intensă cu o senzație ultra-soft,\ndar cu un efect optic imediat de volum. Atenţie! Setările monitorului (contrast, luminozitate, intensitate) pot influenţa nuanţa culorilor.",
           imageSrc: "https://www.farmec.ro/media/catalog/product/cache/7fac84570d1a69c5b087ea5bb1fc1c3f/2/5/2537-ruj-cremos-gerovital-beauty_1.png",
           models: [
-            { 1: "/models/RL_01" },
-            { 2: "/models/RL_02" },
-            { 3: "/models/RL_03" },
-            { 4: "/models/RL_04" },
-            { 5: "/models/RL_05" },
-            { 6: "/models/RL_06" }
+            "/models/RL_01",
+            "/models/RL_02",
+            "/models/RL_04",
+            "/models/RL_05",
+            "/models/RL_06"
           ],
           textureImageSrc: [
-            { 1: "/textures/RL_01.jpg" },
-            { 2: "/textures/RL_02.jpg" },
-            { 3: "/textures/RL_03.jpg" },
-            { 4: "/textures/RL_04.jpg" },
-            { 5: "/textures/RL_05.jpg" },
-            { 6: "/textures/RL_06.jpg" },
+            "/textures/RL_01.jpg",
+            "/textures/RL_02.jpg",
+            "/textures/RL_04.jpg",
+            "/textures/RL_05.jpg",
+            "/textures/RL_06.jpg",
           ]
         }
       ]
@@ -212,7 +204,7 @@ export default {
   computed: {
     product() {
       return this.products.find(product =>
-          product.id === this.productRouteId
+          product.id == this.productRouteId
       );
     }
   }
