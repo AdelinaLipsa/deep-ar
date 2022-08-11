@@ -88,7 +88,7 @@
         </div>
       </div>
     </div>
-    <deep-pop-up v-if="showModal" :textures="product.textureImageSrc" :models="product.models"></deep-pop-up>
+    <deep-pop-up v-if="showModal" :textures="product.textureImageSrc" :models="product.models" @closeModal="showModal = false"></deep-pop-up>
   </div>
 </template>
 
@@ -159,20 +159,20 @@ export default {
           info: "Ruj lichid cu rezistență îndelungată 8H este disponibil în 5 nuanțe.  Un ruj cu o textură remarcabilă care combină o culoare extrem de intensă cu o senzație ultra-soft,\ndar cu un efect optic imediat de volum. Atenţie! Setările monitorului (contrast, luminozitate, intensitate) pot influenţa nuanţa culorilor.",
           imageSrc: "https://www.farmec.ro/media/catalog/product/cache/7fac84570d1a69c5b087ea5bb1fc1c3f/2/5/2506_2507_2508-ruj-cremos-gerovital-beauty_2.png",
           models: [
-            "/models/RM_01",
-            "/models/RM_02",
-            "/models/RM_03",
-            "/models/RM_04",
-            "/models/RM_05",
-            "/models/RM_06"
+            "/models/RM_19",
+            "/models/RM_20",
+            "/models/RM_22",
+            "/models/RM_25",
+            "/models/RM_29",
+            "/models/RM_30"
           ],
           textureImageSrc: [
-            "/textures/RM_01.jpg",
-            "/textures/RM_02.jpg",
-            "/textures/RM_03.jpg",
-            "/textures/RM_04.jpg",
-            "/textures/RM_05.jpg",
-            "/textures/RM_06.jpg",
+            "/textures/RM_19.jpg",
+            "/textures/RM_20.jpg",
+            "/textures/RM_22.jpg",
+            "/textures/RM_25.jpg",
+            "/textures/RM_29.jpg",
+            "/textures/RM_30.jpg",
           ]
         },
 
