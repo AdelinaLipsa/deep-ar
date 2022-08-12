@@ -16,7 +16,7 @@
               <h3 class="text-sm text-gray-600">Alege o textura:</h3>
 
               <fieldset class="mt-2 flex">
-                <div v-for="texture in textures" class="flex items-center space-x-3" :key="texture">
+                <div v-for="texture in product.textureImageSrc" class="flex items-center space-x-3" :key="texture">
                   <texture-filters :texture="texture" @selectedFilter="selectedFilter"></texture-filters>
                 </div>
               </fieldset>
@@ -35,59 +35,53 @@ export default {
   components: { TextureFilters },
 
   props: {
-    textures: {
-      required: true,
-      type: Array
-    },
-
-    models: {
-      required: true,
-      type: Array
+    product: {
+      required:true,
+      type: Object
     }
   },
 
-  data() {
-    return {
-      deepAr: null
+  data(){
+    return{
+      productModel: this.product.textureImageSrc[0].match(new RegExp("[^/]+(?=\\.[^/.]*$)"))[0],
+      deepAR: null
     }
   },
 
   methods: {
     selectedFilter(filter) {
-      let selectedFilter = filter.match(new RegExp("[^/]+(?=\\.[^/.]*$)"))[0];
-      this.handleDeepAr(selectedFilter);
+      this.productModel = filter.match(new RegExp("[^/]+(?=\\.[^/.]*$)"))[0];
+      this.deepAR.switchEffect(0, 'slot', 'models/' + this.productModel);
     },
 
     handleClose(){
-      if(this.deepAr)
-        this.deepAR.stopVideo();
       this.$emit('closeModal');
     },
 
-    handleDeepAr(filter) {
-      // start video immediately after the initalization, mirror = true
-      this.deepAR.startVideo(true);
-      this.deepAR.switchEffect(0, 'slot', '/models/' + filter);
-      this.deepAR.setCanvasSize(900, 600);
-    },
-
     initializeDeepAr() {
+      let product = this.productModel;
       // eslint-disable-next-line no-undef
-      this.deepAR = DeepAR({
+      let deepAR = DeepAR({
         licenseKey: '6fda241c565744899d3ea574dc08a18ce3860d219aeb6de4b2d23437d7b6dcfcd79941dffe0e57f0',
         libPath: './lib',
         segmentationInfoZip: 'segmentation.zip',
         canvas: this.$refs.canvas,
         numberOfFaces: 1, // how many faces we want to track min 1, max 4
-        onInitialize: function(){}
+        onInitialize: function(){
+          deepAR.startVideo(true);
+          deepAR.switchEffect(0, 'slot', 'models/' + product);
+          deepAR.setCanvasSize(900, 600);
+        }
       })
 
-      this.deepAR.downloadFaceTrackingModel('models/models-68-extreme.bin');
+      deepAR.downloadFaceTrackingModel('models/models-68-extreme.bin');
+
+      this.deepAR = deepAR;
     }
   },
 
   mounted() {
-    this.initializeDeepAr();
-  }
+      this.initializeDeepAr();
+  },
 }
 </script>
