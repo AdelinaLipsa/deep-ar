@@ -6,9 +6,9 @@
       <div class="flex items-end sm:items-center justify-center min-h-full p-4 text-center sm:p-0">
         <div
             class="relative bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:p-6">
-          <div class="flex justify-end text-sm text-gray-500 cursor-pointer" @click="$emit('closeModal')">Inchide[X]
+          <div class="flex justify-end text-sm text-gray-500 cursor-pointer" @click="handleClose">Inchide[X]
           </div>
-          <canvas class="deepar" id="deepar-canvas" oncontextmenu="event.preventDefault()"
+          <canvas class="deepar" id="deepar-canvas" ref="canvas" oncontextmenu="event.preventDefault()"
           ></canvas>
           <form class="mt-6">
             <!-- Colors -->
@@ -58,6 +58,12 @@ export default {
       this.handleDeepAr(selectedFilter);
     },
 
+    handleClose(){
+      if(this.deepAr)
+        this.deepAR.stopVideo();
+      this.$emit('closeModal');
+    },
+
     handleDeepAr(filter) {
       // start video immediately after the initalization, mirror = true
       this.deepAR.startVideo(true);
@@ -71,8 +77,9 @@ export default {
         licenseKey: '6fda241c565744899d3ea574dc08a18ce3860d219aeb6de4b2d23437d7b6dcfcd79941dffe0e57f0',
         libPath: './lib',
         segmentationInfoZip: 'segmentation.zip',
-        canvas: document.getElementById('deepar-canvas'),
+        canvas: this.$refs.canvas,
         numberOfFaces: 1, // how many faces we want to track min 1, max 4
+        onInitialize: function(){}
       })
 
       this.deepAR.downloadFaceTrackingModel('models/models-68-extreme.bin');
