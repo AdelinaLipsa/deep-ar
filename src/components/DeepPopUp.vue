@@ -62,7 +62,7 @@ export default {
       let product = this.productModel;
       // eslint-disable-next-line no-undef
       let deepAR = DeepAR({
-        licenseKey: '6fda241c565744899d3ea574dc08a18ce3860d219aeb6de4b2d23437d7b6dcfcd79941dffe0e57f0',
+        licenseKey: '6b0c25cf43f87198a0066cdbcd7c7c6b8d2080dc2f88d29ca4ebf01fcd81b30e70ebb3abcfcad610',
         libPath: './lib',
         segmentationInfoZip: 'segmentation.zip',
         canvas: this.$refs.canvas,
