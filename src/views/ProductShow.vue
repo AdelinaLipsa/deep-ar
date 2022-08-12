@@ -80,7 +80,7 @@
                 <p v-text="product.info"></p>
               </div>
 
-              <button class="block text-sm font-medium text-gray-500 bg-indigo-300 p-2 rounded text-white mt-5 cursor-pointer"
+              <button class="block text-sm font-medium text-gray-500 bg-indigo-500 p-2 rounded text-white mt-5 cursor-pointer"
                       @click="showModal = true">Incearca o textura!
               </button>
             </div>
@@ -88,7 +88,7 @@
         </div>
       </div>
     </div>
-    <deep-pop-up v-if="showModal" :textures="product.textureImageSrc" :models="product.models" @closeModal="showModal = false"></deep-pop-up>
+    <deep-pop-up v-if="showModal" :textures="product.textureImageSrc" :models="product.models" @closeModal="handleModalClose"></deep-pop-up>
   </div>
 </template>
 
@@ -206,6 +206,13 @@ export default {
       return this.products.find(product =>
           product.id == this.productRouteId
       );
+    }
+  },
+
+  methods:{
+    handleModalClose(){
+      // eslint-disable-next-line no-undef
+      this.showModal = false;
     }
   }
 }

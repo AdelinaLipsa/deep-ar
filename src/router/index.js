@@ -13,7 +13,7 @@ const routes = [
   },
 
   {
-    path: '/products',
+    path: '/',
     name: 'index',
     component: ProductsIndex ,
     props: true
