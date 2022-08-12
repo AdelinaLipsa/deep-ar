@@ -196,6 +196,50 @@ export default {
             "/textures/RL_05.jpg",
             "/textures/RL_06.jpg",
           ]
+        },
+
+
+        {
+          id: 5,
+          name: "Mascara Full Fan Volume",
+          price: '45lei',
+          info: "Prima noastră pensulă din elastomer!\n" +
+              "\n" +
+              "Ridică și curbează pentru un efect de evantai!\n" +
+              "\n" +
+              "• volum, fără aglomerări\n" +
+              "\n" +
+              "• îmbogățit cu ulei de cocos\n" +
+              "\n" +
+              "• rezistent la apă",
+          imageSrc: "https://www.farmec.ro/media/catalog/product/cache/7fac84570d1a69c5b087ea5bb1fc1c3f/2/5/2550-mascara-supreme-lash-gerovital-beauty-recipient.png",
+          models: [
+            "/models/eyelashes"
+          ],
+          textureImageSrc: [
+            "/textures/eyelashes.png",
+          ]
+        },
+
+        {
+          id: 6,
+          name: "Smokey",
+          price: '100lei',
+          info: "Paleta de farduri evidențiază și definește machiajul ochilor.\n" +
+              "\n" +
+              "Conține:\n" +
+              "\n" +
+              "6 culori complementare, mate și sidefate\n" +
+              "Pensulă dublă\n" +
+              "Oglindă\n" +
+              "Disponibilă în 3 variante: rose, nude și smokey",
+          imageSrc: "https://www.farmec.ro/media/catalog/product/cache/7fac84570d1a69c5b087ea5bb1fc1c3f/2/5/256-2561-2562-fard-pleoape-smoky-gerovital-beauty-paleta.png",
+          models: [
+            "/models/Smokey2"
+          ],
+          textureImageSrc: [
+            "/textures/Smokey2.png",
+          ]
         }
       ]
     }
