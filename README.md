@@ -1,5 +1,4 @@
 # farmec
-https://adelinalipsa.github.io/deep-ar/
 
 ## Project setup
 ```
