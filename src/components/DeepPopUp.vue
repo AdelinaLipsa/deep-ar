@@ -8,7 +8,7 @@
             class="relative bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:p-6">
           <div class="flex justify-end text-sm text-gray-500 cursor-pointer" @click="handleClose">Inchide[X]
           </div>
-          <canvas class="deepar" id="deepar-canvas" ref="canvas" oncontextmenu="event.preventDefault()"
+          <canvas class="deepar" id="deepar-canvas" ref="canvas" :class="" oncontextmenu="event.preventDefault()"
           ></canvas>
           <form class="mt-6">
             <!-- Colors -->
@@ -70,7 +70,11 @@ export default {
         onInitialize: function(){
           deepAR.startVideo(true);
           deepAR.switchEffect(0, 'slot', 'models/' + product);
-          deepAR.setCanvasSize(900, 600);
+          if(window.innerWidth < 500){
+            deepAR.setCanvasSize(350, 650);
+          } else {
+            deepAR.setCanvasSize(900, 600);
+          }
         }
       })
 
