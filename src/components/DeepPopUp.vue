@@ -8,12 +8,12 @@
             class="relative bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:p-6">
           <div class="flex justify-end text-sm text-gray-500 cursor-pointer" @click="handleClose">Inchide[X]
           </div>
-          <canvas class="deepar" id="deepar-canvas" ref="canvas" :class="" oncontextmenu="event.preventDefault()"
+          <canvas class="deepar" id="deepar-canvas" ref="canvas" oncontextmenu="event.preventDefault()"
           ></canvas>
           <form class="mt-6">
             <!-- Colors -->
             <div>
-              <h3 class="text-sm text-gray-600">Alege o textura:</h3>
+              <h3 class="text-sm text-gray-600">Alege o culoare pentru {{product.name}}:</h3>
 
               <fieldset class="mt-2 flex">
                 <div v-for="texture in product.textureImageSrc" class="flex items-center space-x-3" :key="texture">
